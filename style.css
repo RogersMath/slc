@@ -93,10 +93,9 @@ body {
 }
 
 .main-subtitle {
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 300;
     color: var(--text-light);
-    max-width: 500px;
     margin: 0 auto;
 }
 
