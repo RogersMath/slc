@@ -1,1 +1,1 @@
-# slc
+This website is generated for use only by the Student Learning Center of Palm Beach State College and is for testing and design purposes only. All code, images, logos, or other content are the property of Palm Beach State College.
