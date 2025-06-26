@@ -3,121 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Learning Center (SLC) - Palm Beach State College</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>PBSC SLC Math Programming Flyer</title>
+    <!-- Font Awesome CDN for better icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        :root {
+            --pbsc-blue: #003e7e;
+            --pbsc-green: #008953;
+            --pbsc-gold: #fdb913;
+            --page-bg: #f8f9fa;
+            --dark-text: #343a40;
+            --light-text: #ffffff;
+            --subtle-text: #6c757d;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--page-bg);
+            color: var(--dark-text);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .flyer-container {
+            max-width: 900px; /* Wider to accommodate 2 columns */
+            width: 100%;
+            background-color: var(--light-text);
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #dee2e6;
+        }
+
+        .logo-bar {
+            background-color: var(--light-text);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .logo-bar img {
+            max-width: 280px;
+        }
+
+        .title-banner {
+            background: linear-gradient(135deg, var(--pbsc-blue) 0%, #0058a2 100%);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            border-bottom: 6px solid var(--pbsc-gold);
+        }
+
+        .title-banner h1 {
+            color: var(--light-text);
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .title-banner .subtitle {
+            color: var(--light-text);
+            opacity: 0.9;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            padding: 1.5rem;
+        }
+
+        .category-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .icon-frame {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--pbsc-green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            color: var(--light-text);
+            font-size: 1.25rem;
+        }
+
+        .category-title-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .category-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--pbsc-blue);
+        }
+        
+        .divider {
+            height: 4px;
+            width: 50px;
+            background-color: var(--pbsc-green);
+            border-radius: 2px;
+            margin-top: 0.25rem;
+        }
+
+        .program {
+            margin-bottom: 1.5rem;
+        }
+        
+        .program:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .program h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--pbsc-green);
+            margin: 0 0 0.25rem 0;
+        }
+
+        .program .description {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--subtle-text);
+            margin-bottom: 0.75rem;
+        }
+        
+        .program .details {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--pbsc-green);
+            background-color: #e6f3ee;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .additional-info {
+            font-size: 0.9rem;
+            margin-top: auto; /* Pushes to the bottom */
+            padding-top: 1rem;
+            padding: 1rem;
+            background: rgba(253, 185, 19, 0.1);
+            border-left: 4px solid var(--pbsc-gold);
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .additional-info strong {
+            color: #b98509;
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 1rem 0.5rem; }
+            .content-grid { grid-template-columns: 1fr; }
+            .title-banner h1 { font-size: 1.6rem; }
+            .title-banner .subtitle { font-size: 1rem; }
+        }
+
+    </style>
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-container">
-            <a href="https://www.palmbeachstate.edu/">
-                <img src="https://www.palmbeachstate.edu/_resources/images/logo.jpg" alt="Palm Beach State College Logo" class="logo">
-            </a>
-            <nav class="top-nav">
-                <a href="https://mypbsc.palmbeachstate.edu/pbsc_student/student_desktop/" target="_blank">Students</a>
-                <a href="https://www.palmbeachstate.edu/canvas/" target="_blank">Canvas</a>
-                <a href="https://www.palmbeachstate.edu/pf/Default.aspx" target="_blank">Directory</a>
-                <a href="https://mypbsc.palmbeachstate.edu/faculty_staff/" target="_blank">Faculty/Staff</a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="page-banner"></div>
-
-    <main class="container">
-        <section class="hero-section">
-            <h1 class="main-title">SLC</h1>
-            <p class="main-subtitle">The Student Learning Center is your partner in academic success.</p>
-        </section>
-
-        <section class="cta-section">
-            <a href="https://pbsc.edu/eab-navigate/" target="_blank" class="cta-button">Make an Appointment</a>
-            <a href="https://www.palmbeachstate.edu/slc/" target="_blank" class="cta-button">Visit the SLC Website</a>
-            <a href="https://www.palmbeachstate.edu/slc/faqs.aspx" target="_blank" class="cta-button">View FAQs</a>
-        </section>
-
-        <div class="divider"></div>
-        
-        <section class="accordion-section">
-            <h2>Find the Right Math Support For You</h2>
-            <p>Expand a category below to see which programs best fit your needs.</p>
-            <div class="accordion-container">
-                <!-- Accordion items will be the same as before -->
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <h3>I need help with homework or a specific concept.</h3>
-                        <i class="fas fa-plus accordion-icon"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="program-card">
-                            <h4>One-on-One Tutoring</h4>
-                            <p><strong>Description:</strong> Individualized math tutoring with our trained peer tutors to work through specific problems or challenging topics.</p>
-                        </div>
-                        <div class="program-card">
-                            <h4>Math Study Sessions</h4>
-                            <p><strong>Description:</strong> Drop in for faculty-aligned group study on key topics in foundational math courses. A great place to ask questions.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <h3>I have a big test or exam coming up.</h3>
-                        <i class="fas fa-plus accordion-icon"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="program-card">
-                            <h4>PALS (Panther Academic Learning Support)</h4>
-                            <p><strong>Description:</strong> Peer-led group learning sessions specifically designed for high-challenge math courses to master difficult material before exams.</p>
-                        </div>
-                        <div class="program-card">
-                            <h4>HESI Prep Support</h4>
-                            <p><strong>Description:</strong> Targeted academic support for pre-nursing and health science students preparing for the high-stakes HESI exam.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <h3>I learn best by working with other students.</h3>
-                        <i class="fas fa-plus accordion-icon"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="program-card">
-                            <h4>Study Buddies</h4>
-                            <p><strong>Description:</strong> Form your own peer-led collaborative study groups to support math learning. You take the lead!</p>
-                        </div>
-                        <div class="program-card">
-                            <h4>PALS (Panther Academic Learning Support)</h4>
-                            <p><strong>Description:</strong> Join interactive, peer-led group sessions for high-challenge courses. It's collaboration with expert guidance.</p>
-                        </div>
-                    </div>
-                </div>
+    <div class="flyer-container">
+        <header>
+            <div class="logo-bar">
+                 <img src="https://www.palmbeachstate.edu/_resources/images/logo.jpg" alt="Palm Beach State College Logo">
             </div>
-        </section>
-
-        <div class="divider"></div>
-
-        <section class="testimonials-section">
-            <h2>What Students Are Saying</h2>
-            <div class="carousel">
-                <div class="carousel-inner"></div>
-                <button class="carousel-control prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="carousel-control next"><i class="fas fa-chevron-right"></i></button>
-                <div class="carousel-dots"></div>
+            <div class="title-banner">
+                <h1>Student Learning Center (SLC)</h1>
+                <p class="subtitle">Math Programming & Support</p>
             </div>
-        </section>
+        </header>
 
-    </main>
+        <main class="content-grid">
+            
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="icon-frame"><i class="fas fa-hands-helping"></i></div>
+                    <div class="category-title-wrapper">
+                        <h2>Foundational Support</h2>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+                
+                <div class="program">
+                    <h3>Individualized Tutoring</h3>
+                    <p class="description">One-on-one math tutoring with trained tutors to strengthen understanding.</p>
+                    <div class="details">Appointments via Navigate360</div>
+                </div>
+                <div class="program">
+                    <h3>Study Buddies</h3>
+                    <p class="description">Peer-led collaborative study groups to support math learning with your classmates.</p>
+                    <div class="details">Self-selected groups via Navigate360</div>
+                </div>
+            </section>
 
-    <footer class="site-footer">
-        <p>© 2025 Palm Beach State College. All Rights Reserved.</p>
-    </footer>
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="icon-frame"><i class="fas fa-rocket"></i></div>
+                    <div class="category-title-wrapper">
+                        <h2>Early Term Success</h2>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+                <div class="program">
+                    <h3>Math Orientations</h3>
+                    <p class="description">Overview of course expectations, available resources, and tips for success for new or returning students.</p>
+                    <div class="details">Beginning of each term</div>
+                </div>
+            </section>
+            
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="icon-frame"><i class="fas fa-users"></i></div>
+                    <div class="category-title-wrapper">
+                        <h2>Group Study</h2>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+                 <div class="program">
+                    <h3>PALS (Panther Academic Learning Support)</h3>
+                    <p class="description">Peer-led group learning sessions for high-challenge math courses.</p>
+                    <div class="details">Weekly interactive groups</div>
+                </div>
+                <div class="program">
+                    <h3>Math Study Sessions</h3>
+                    <p class="description">Faculty-aligned group study on key topics in foundational math courses.</p>
+                    <div class="details">Multiple sessions per term</div>
+                </div>
+            </section>
 
-    <script src="script.js"></script>
+            <section class="category-section">
+                <div class="category-header">
+                    <div class="icon-frame"><i class="fas fa-bullseye"></i></div>
+                    <div class="category-title-wrapper">
+                        <h2>Targeted Preparation</h2>
+                        <div class="divider"></div>
+                    </div>
+                </div>
+                <div class="program">
+                    <h3>HESI Prep Support</h3>
+                    <p class="description">Targeted academic support for pre-nursing and health science students preparing for the HESI exam.</p>
+                    <div class="details">Group and/or one-on-one sessions</div>
+                </div>
+                <div class="program">
+                    <h3>Athletic Tutoring</h3>
+                    <p class="description">Academic support tailored to student-athletes' course and travel schedules.</p>
+                    <div class="details">By appointment</div>
+                </div>
+                <div class="additional-info">
+                    <strong>Additional support</strong> is available through the Center for Student Accessibility (CSA).
+                </div>
+            </section>
+        </main>
+    </div>
+
 </body>
 </html>
